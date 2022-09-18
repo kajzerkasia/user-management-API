@@ -1,0 +1,51 @@
+<h2>You are editing {{user.firstName}} (<small>{{user.id}}</small>)</h2>
+<form method="POST" action="/api/{{user.id}}?_method=PATCH">
+    <label>
+        <p>
+            E-mail:
+        </p>
+        <p>
+            <input type="email" name="mail" value="{{user.email}}">
+        </p>
+    </label>
+
+    <label>
+        <p>
+            Name:
+        </p>
+        <p>
+            <input type="text" name="firstName" value="{{user.firstName}}">
+        </p>
+    </label>
+
+    <label>
+        <p>
+            Surname:
+        </p>
+        <p>
+            <input type="text" name="lastName" value="{{user.lastName}}">
+        </p>
+    </label>
+
+    <label>
+        <p>
+            *Role:
+        </p>
+        <p>
+            <select name="role">
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+            </select>
+        </p>
+    </label>
+
+    <p>
+        <small>Fields marked with * are required.</small>
+    </p>
+
+    <p>
+        <button type="submit">Save</button>
+    </p>
+
+    {{> go-to-users}}
+</form>

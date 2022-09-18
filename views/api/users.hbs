@@ -1,0 +1,54 @@
+<h2>Users List</h2>
+<h3>
+    <a href="api/forms/role">Show only users with selected role</a>
+</h3>
+<table>
+    <thead>
+    <tr>
+        <th>
+            E-mail
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            Role
+        </th>
+        <th>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each usersList}}
+        <tr>
+            <th>
+                <a href="mailto:{{this.email}}" target="_blank">{{this.email}}</a>
+            </th>
+            <td>
+                <a href="/api/{{this.id}}">{{this.firstName}}</a>
+            </td>
+            <td>
+                <a href="/api/{{this.id}}">{{this.lastName}}</a>
+            </td>
+            <td>
+                <p>{{this.role}}</p>
+            </td>
+            <td>
+                <a href="/api/{{this.id}}">Details</a>
+                <form method="POST" action="/api/{{this.id}}?_method=DELETE">
+                    <button type="submit">Remove</button>
+                </form>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+<p>
+<form method="GET" action="/api/forms/add">
+    <button type="submit">Add new user</button>
+</form>
+</p>

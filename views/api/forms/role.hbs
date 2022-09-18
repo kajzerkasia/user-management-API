@@ -1,0 +1,21 @@
+<h2>Choose what role of users you want to see.</h2>
+<form method="POST" action="/api">
+
+    <label>
+        <p>
+            Role:
+        </p>
+        <p>
+            <select name="role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+        </p>
+
+        <p>
+            <button type="submit">Show users</button>
+        </p>
+    </label>
+
+    {{> go-to-users}}
+</form>
