@@ -22,6 +22,7 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `role`) VALUES
 --
 -- Indeksy dla tabeli `users`
 --
+
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`) USING HASH;
@@ -29,6 +30,7 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT dla tabeli `users`
 --
+
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
