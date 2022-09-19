@@ -1,6 +1,6 @@
 
 --
--- Struktura tabeli dla tabeli `users`
+-- Struktura tabeli `users`
 --
 
 CREATE TABLE `users` (
@@ -20,19 +20,11 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `role`) VALUES
 (2, 'Jan', 'Kowalski', 'jkowalski@gmail.com', 'Admin');
 
 --
--- Indeksy dla zrzutów tabel
---
-
---
 -- Indeksy dla tabeli `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`) USING HASH;
-
---
--- AUTO_INCREMENT dla zrzuconych tabel
---
 
 --
 -- AUTO_INCREMENT dla tabeli `users`
