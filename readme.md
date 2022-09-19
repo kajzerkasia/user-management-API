@@ -6,7 +6,7 @@
 - adding a user to the database
 - removing the user from the database
 - editing user data
-- displaying only users with selected role
+- displaying only users with selected role (admin/user)
 
 ###  How to start a project?
 - make a git clone
@@ -15,7 +15,7 @@
 1. create SQL database named "usersapi"
 2. create one table named "users" with the following schema:
 
-"id"        INTEGER NOT NULL,
+"id"         INTEGER NOT NULL AUTO_INCREMENT,
 
 "firstName" TEXT,
 
